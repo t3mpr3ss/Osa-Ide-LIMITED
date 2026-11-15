@@ -1,0 +1,562 @@
+/* OSA-IDE NIGERIA LIMITED - stylesheet (concrete grey, white, safety orange) */
+:root {
+  --orange: #e8590c;
+  --orange-dark: #c24a08;
+  --ink: #1b1d1f;
+  --grey: #f1f1ef;
+  --mid: #5d6166;
+  --line: #dcdcd8;
+  --font: "Archivo", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: #fff;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+}
+
+
+/* nav */
+.site-navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.brand-name {
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: .04em;
+  line-height: 1;
+}
+
+.brand-name small {
+  display: block;
+  color: var(--mid);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  margin-top: 4px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 0 !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--orange);
+}
+
+.navbar-toggler {
+  border: 0;
+  box-shadow: none !important;
+}
+
+.btn {
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 26px;
+}
+
+.btn-orange {
+  background: var(--orange);
+  border: 2px solid var(--orange);
+  color: #fff;
+}
+
+.btn-orange:hover {
+  background: var(--orange-dark);
+  border-color: var(--orange-dark);
+  color: #fff;
+}
+
+.btn-line {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-line:hover {
+  background: #fff;
+  color: var(--ink);
+}
+
+.nav-cta {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+
+/* hero: photo layer (images/hero.jpg) over a concrete-grey fallback */
+.hero {
+  min-height: calc(100vh - 71px);
+  min-height: calc(100svh - 71px);
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  background:
+    linear-gradient(0deg, rgba(15,16,18,.88) 0%, rgba(15,16,18,.45) 55%, rgba(15,16,18,.25) 100%),
+    url("./IMAGES/tractor.jpg") center/cover no-repeat,
+    #34383c;
+}
+
+.hero-inner {
+  padding: 90px 12px 70px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 88px);
+  max-width: 12em;
+  margin-bottom: 22px;
+}
+
+.hero h1 b {
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.hero p {
+  max-width: 560px;
+  font-size: 19px;
+  color: #e6e7e8;
+}
+
+.hero-note {
+  position: absolute;
+  top: 96px;
+  right: 20px;
+  font-size: 12px;
+  color: #aeb2b6;
+}
+
+
+/* stats */
+.stats {
+  background: var(--ink);
+  color: #fff;
+}
+
+.stat {
+  padding: 30px 24px;
+  border-right: 1px solid #35383c;
+  height: 100%;
+}
+
+.stat strong {
+  display: block;
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.stat span {
+  font-size: 15px;
+  color: #c9ccd0;
+}
+
+.stats .col-6:last-child .stat,
+.stats .col-lg-3:last-child .stat {
+  border-right: 0;
+}
+
+
+/* sections */
+.pad {
+  padding: 96px 0;
+}
+
+.bg-grey {
+  background: var(--grey);
+}
+
+.label {
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(30px, 4vw, 48px);
+  margin-bottom: 20px;
+}
+
+.lead-copy {
+  color: var(--mid);
+  max-width: 600px;
+}
+
+.more {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--ink);
+  font-weight: 700;
+  border-bottom: 3px solid var(--orange);
+  padding-bottom: 3px;
+}
+
+.more:hover {
+  color: var(--orange);
+}
+
+
+/* image placeholders (dashed box naming the file) */
+.ph {
+  position: relative;
+  background: #d9d9d5;
+  overflow: hidden;
+}
+
+.ph::before {
+  content: "Place photo here:\A" attr(data-path);
+  white-space: pre;
+  position: absolute;
+  inset: 14px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border: 2px dashed #a3a39d;
+  color: #55585c;
+  font-size: 14px;
+  line-height: 1.6;
+  z-index: 0;
+}
+
+.ph > img {
+  position: relative;
+  z-index: 1;
+}
+
+.img-missing {
+  visibility: hidden;
+}
+
+.intro-img {
+  height: 460px;
+}
+
+.intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* services */
+.service {
+  height: 100%;
+  background: #fff;
+  padding: 34px 30px;
+  border-top: 5px solid var(--orange);
+}
+
+.service i {
+  font-size: 32px;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 18px;
+}
+
+.service h3 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: var(--mid);
+  font-size: 16px;
+  margin: 0;
+}
+
+
+/* project rows with sliders */
+.project {
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+
+.project:first-of-type {
+  border-top: 0;
+}
+
+.project .carousel-item {
+  height: 420px;
+}
+
+.project .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project .carousel-control-prev,
+.project .carousel-control-next {
+  width: 54px;
+  opacity: 1;
+}
+
+.project .carousel-control-prev-icon,
+.project .carousel-control-next-icon {
+  background-color: var(--ink);
+  background-size: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.project .carousel-control-prev-icon:hover,
+.project .carousel-control-next-icon:hover {
+  background-color: var(--orange);
+}
+
+.tag {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 12px;
+  margin-bottom: 16px;
+}
+
+.project h3 {
+  font-size: clamp(26px, 3vw, 36px);
+  margin-bottom: 6px;
+}
+
+.project .where {
+  color: var(--mid);
+  margin-bottom: 16px;
+}
+
+
+/* standards + cta */
+.standard {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.standard:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.standard h3 {
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.standard p {
+  color: var(--mid);
+  font-size: 16px;
+  margin: 0;
+}
+
+.cta {
+  background: var(--orange);
+  color: #fff;
+  padding: 70px 0;
+}
+
+.cta h2 {
+  font-size: clamp(30px, 4.4vw, 52px);
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.btn-dark2 {
+  background: var(--ink);
+  border: 2px solid var(--ink);
+  color: #fff;
+}
+
+.btn-dark2:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+/* footer */
+.site-footer {
+  background: var(--ink);
+  color: #c9ccd0;
+  padding: 70px 0 24px;
+}
+
+.footer-brand {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.footer-brand span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: #9da1a6;
+  margin-top: 4px;
+}
+
+.site-footer p.d {
+  font-size: 15px;
+  color: #aeb2b6;
+  max-width: 340px;
+  margin-top: 18px;
+}
+
+.site-footer h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  display: block;
+  color: #c9ccd0;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.site-footer a:hover {
+  color: var(--orange);
+}
+
+.footer-contact {
+  display: flex;
+  gap: 12px;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.footer-contact[hidden] {
+  display: none;
+}
+
+.footer-contact i {
+  color: var(--orange);
+}
+
+.footer-contact a {
+  color: inherit;
+}
+
+.footer-bottom {
+  border-top: 1px solid #35383c;
+  margin-top: 46px;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #8d9196;
+}
+
+.floating-contact {
+  position: fixed;
+  z-index: 900;
+  right: 20px;
+  bottom: 20px;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: var(--orange);
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.3);
+}
+
+.floating-contact:hover {
+  background: var(--orange-dark);
+  color: #fff;
+}
+
+
+/* responsive */
+@media (max-width: 991.98px) {
+  .pad {
+    padding: 72px 0;
+  }
+  .project .carousel-item {
+    height: 340px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 16px;
+  }
+  .pad {
+    padding: 56px 0;
+  }
+  .hero p {
+    font-size: 17px;
+  }
+  .hero-note {
+    display: none;
+  }
+  .intro-img {
+    height: 300px;
+  }
+  .project {
+    padding: 40px 0;
+  }
+  .project .carousel-item {
+    height: 260px;
+  }
+  .stat {
+    padding: 22px 16px;
+  }
+  .stat strong {
+    font-size: 36px;
+  }
+  .stats .col-6:nth-child(2) .stat {
+    border-right: 0;
+  }
+}

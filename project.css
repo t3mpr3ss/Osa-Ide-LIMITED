@@ -1,0 +1,171 @@
+/* Extra styles for project.html. Loads AFTER style.css. */
+.page-head {
+  background: var(--ink);
+  color: #fff;
+  padding: 64px 0 48px;
+}
+
+.page-head h1 {
+  font-size: clamp(32px, 5vw, 58px);
+  max-width: 16em;
+  margin: 10px 0 0;
+}
+
+.crumbs {
+  font-size: 14px;
+  color: #aeb2b6;
+}
+
+.crumbs a {
+  color: #fff;
+}
+
+.crumbs a:hover {
+  color: var(--orange);
+}
+
+.gallery .carousel-item {
+  height: 540px;
+}
+
+.gallery .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery .carousel-control-prev,
+.gallery .carousel-control-next {
+  width: 60px;
+  opacity: 1;
+}
+
+.gallery .carousel-control-prev-icon,
+.gallery .carousel-control-next-icon {
+  background-color: var(--ink);
+  background-size: 50%;
+  width: 46px;
+  height: 46px;
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.thumbs button {
+  border: 0;
+  padding: 0;
+  height: 90px;
+  background: #d9d9d5;
+  opacity: .65;
+  border-bottom: 4px solid transparent;
+}
+
+.thumbs button.active {
+  opacity: 1;
+  border-color: var(--orange);
+}
+
+.thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.facts {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.facts th,
+.facts td {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+}
+
+.facts th {
+  width: 38%;
+  font-size: 14px;
+  color: var(--mid);
+  font-weight: 600;
+}
+
+.facts td {
+  font-weight: 600;
+}
+
+.next-link {
+  display: block;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.next-link small {
+  display: block;
+  color: var(--mid);
+}
+
+.next-link strong {
+  font-size: 22px;
+}
+
+.next-link:hover strong {
+  color: var(--orange);
+}
+
+@media (max-width: 767.98px) {
+  .gallery .carousel-item {
+    height: 300px;
+  }
+  .thumbs button {
+    height: 54px;
+  }
+}
+
+/* Extra styles for project.html. Loads AFTER style.css. */
+.page-head{background:var(--ink);color:#fff;padding:64px 0 48px}
+.page-head h1{font-size:clamp(32px,5vw,58px);max-width:16em;margin:10px 0 0}
+.crumbs{font-size:14px;color:#aeb2b6}.crumbs a{color:#fff}.crumbs a:hover{color:var(--orange)}
+.gallery .carousel-item{height:540px}
+.gallery .carousel-item img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery .carousel-control-prev,.gallery .carousel-control-next{width:60px;opacity:1}
+.gallery .carousel-control-prev-icon,.gallery .carousel-control-next-icon{background-color:var(--ink);background-size:50%;width:46px;height:46px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.thumbs button{border:0;padding:0;height:90px;background:#d9d9d5;opacity:.65;border-bottom:4px solid transparent}
+.thumbs button.active{opacity:1;border-color:var(--orange)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.facts{width:100%;border-collapse:collapse}
+.facts th,.facts td{padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.facts th{width:38%;font-size:14px;color:var(--mid);font-weight:600}
+.facts td{font-weight:600}
+.next-link{display:block;padding:26px 0;border-top:1px solid var(--line);color:var(--ink)}
+.next-link small{display:block;color:var(--mid)}.next-link strong{font-size:22px}.next-link:hover strong{color:var(--orange)}
+@media(max-width:767.98px){.gallery .carousel-item{height:300px}.thumbs button{height:54px}}
+
+/* projects page: filters + cards; inner pages */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
+.filters button{border:2px solid var(--ink);background:#fff;color:var(--ink);font-weight:700;font-size:15px;padding:9px 20px}
+.filters button:hover{border-color:var(--orange);color:var(--orange)}
+.filters button.on{background:var(--ink);color:#fff}
+.pcard{display:block;color:var(--ink);height:100%}
+.pcard .ph{height:260px}
+.pcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.pcard:hover img{transform:scale(1.04)}
+.pcard h3{font-size:22px;margin:16px 0 4px}
+.pcard:hover h3{color:var(--orange)}
+.pcard p{color:var(--mid);margin:0;font-size:15px}
+.timeline{border-left:3px solid var(--orange);padding-left:24px}
+.timeline div{margin-bottom:26px}.timeline strong{display:block;font-size:30px;font-weight:800}
+.contact-card{background:var(--grey);padding:34px}
+.contact-card .footer-contact{color:var(--ink)}
+.form-control{border-radius:0;border:2px solid var(--line);padding:12px 14px}
+.form-control:focus{border-color:var(--orange);box-shadow:none}
+.map{border:0;width:100%;height:380px;display:block}
